@@ -2,6 +2,7 @@
 $tabimg = ['img/exodia.jpg','img/celte.jpg','img/magicien.jpg','img/crane.jpg','img/dragonblanc.jpg','img/dragonrouge.jpg','img/obelisk.jpg','img/exodia.jpg','img/celte.jpg','img/magicien.jpg','img/crane.jpg','img/dragonblanc.jpg','img/dragonrouge.jpg','img/obelisk.jpg'];
 
 shuffle($tabimg);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,8 +39,12 @@ shuffle($tabimg);
 	<div id="mosaique">
 		<?php
 		$dos = "img/dos.jpg";
-		for($i=0;$i<=13;$i++)
+			if (isset($_GET["pseudo"], $_GET["min"], $_GET["sec"])) {
+				echo "<a href='./index.php'>RECOMMENCE</a> ";
+			}else{
+			for($i=0;$i<=13;$i++)	
 			echo '<img src="'.$dos.'" class="photo" onclick="choisir('.$i.')" draggable="false"/>';
+		}
 		?>	
 		
 	</div>

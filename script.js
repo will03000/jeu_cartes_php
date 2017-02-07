@@ -45,10 +45,7 @@ function verif() { // Vérifie si une paire a été faite
 		return;
 	}
 	if (paires==7) {
-		clearInterval(timerID);
-		document.getElementById("mosaique").style.display = 'block';
-		document.getElementById("mosaique").style.flexDirection = 'column';
-		document.getElementById('mosaique').innerHTML = '<h1> Tu as gagné !</h1><br /><div id="bouton"><input id = "btnr" type="button" class="restart" value="Reviens Duelliste" onClick="window.location.reload()"></div> <img id="fin" src = "img/yugi.jpg">';
+		document.location.href='./index.php?pseudo='+prompt("pseudo")+'&min='+min+'&sec='+sec;
 	}
 }
 var timerID = 0;
